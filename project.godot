@@ -10,8 +10,19 @@ config_version=4
 
 [application]
 
-config/name="cards-forever"
+config/name="Cards Forever"
+config/description="A trello inspired project management tool built for solo developers"
+run/main_scene="res://Scenes/MainScreen.tscn"
+run/low_processor_mode=true
 config/icon="res://icon.png"
+
+[autoload]
+
+Model="*res://Scripts/model/Model.gd"
+
+[logging]
+
+file_logging/enable_file_logging=true
 
 [physics]
 
