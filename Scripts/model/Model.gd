@@ -61,6 +61,12 @@ func find_card(category_name : String, card_name : String) -> Array:
 				return [cat_index, i]
 	return []
 
+func get_cards(category_name : String) -> Array:
+	var cat_index := find_category(category_name)
+	if cat_index != -1:
+		return model_data["categories"][cat_index]["cards"]
+	return []
+
 """
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	CATEGORIES
@@ -89,6 +95,9 @@ func find_category(name : String) -> int:
 		if entry.name == name:
 			return i
 	return -1
+	
+func get_categories() -> Array:
+	return model_data["categories"]
 """
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	MODEL
